@@ -6,14 +6,14 @@ Dieses Programm ist für AES verschlüsselte, oberösterreichische Zähler ausge
 - example.env im Programmverzeichnis duplizieren, auf die eigenen Bedürfnisse anpassen und auf .env umbenennen.
 ### Direktaufruf
 - Python 3 installieren
-- Bibliotheken aus requirements.txt installieren
+- Bibliotheken aus requirements.txt installieren (`pip install pyserial`)
 - `python3 strompy.py &`
 ### Dockercontainer
 - Source downloaden
 - in commandline in das dockerfile-Verzeichnis wechseln
 - `docker build -t strompy .`
 - `docker run -d --restart unless-stopped --device /dev/ttyAMA0:/dev/ttyAMA0 --name strompy strompy`
-- .env Datei entweder per Docker einbinden oder Einzelwerte als Environmentvariablen übergeben (übersteuern jene der .env)
+- .env Datei entweder schon vorher anpassen oder per Dockervolume einbinden oder Einzelwerte als Environmentvariablen übergeben (übersteuern jene der .env)
 
 ## Vorbereitungen
 Den AES Schlüssel bekommt man unter https://eservice.netzooe.at/app/login 

@@ -1,0 +1,4 @@
+pyserial
+pycryptodome
+paho-mqtt
+python-decouple
